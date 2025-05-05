@@ -50,4 +50,21 @@ async def add(ctx, a: int, b: int):
 async def joined(ctx, *, member: discord.Member):
     await ctx.send(f'{member} joined on {member.joined_at}')
 
+@bot.command()
+async def help(ctx):
+    help_text = """
+    **Comandos disponibles:**
+    - `saludar`: Saluda al bot.
+    - `pregunta <mensaje>`: Pregunta algo al bot.
+    - `emoji`: Genera un emoji aleatorio.
+    - `coin`: Lanza una moneda (HEADS o TAILS).
+    - `password`: Genera una contraseña aleatoria.
+    - `hora`: Muestra la hora actual.
+    - `randomnum <min> <max>`: Genera un número aleatorio entre min y max.
+    - `add <a> <b>`: Suma dos números.
+    - `joined <miembro>`: Muestra la fecha de unión de un miembro.
+    - `help`: Muestra esta ayuda.
+    """
+    await ctx.send(help_text)
+
 bot.run ("")
