@@ -76,4 +76,27 @@ async def retoeco(ctx):
 async def emojieco(ctx):
     await ctx.send(bot_logic2.gen_emoji_eco())
 
+@bot.command()
+async def ayuda(ctx):
+    instrucciones = """
+**Comandos del Bot Ecológico** 
+
+`$saludar` – Te da la bienvenida.
+`$pregunta [mensaje]` – Pregúntale algo al bot ecológico.
+`$triviaeco` – Juega una trivia ecológica.
+`$fraseeco` – Recibe una frase ecológica.
+`$recomendacion_app` – Conoce una app ecológica recomendada.
+`$consejoeco` – Un consejo verde para ti.
+`$globalresiduos` – Dato global sobre residuos.
+`$impactoeco` – Dato impactante sobre el medio ambiente.
+`$consejo_casa` – Consejo ecológico para el hogar.
+`$consejo_escuela` – Consejo ecológico para la escuela.
+`$consejo_redes` – Consejo ecológico para redes sociales.
+`$retoeco` – Acepta un reto ecológico.
+`$emojieco` – Emojis con temática ecológica.
+
+Usa estos comandos y conviértete en un defensor del planeta.
+"""
+    await ctx.send(instrucciones)
+
 bot.run('')
